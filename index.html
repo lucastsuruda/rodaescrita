@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Tsuruda — Escritor & Mediador de Escrita</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=cH5N5nxoZD66n5lZT6PoFdgtLiJon1s_O0e6Tu-1lKl2RlK_00KkS2slPFUS3BlgP0vR-9mvqreKm3MQ9enfNDYEztVwRCobAzjVjRKoGCFK2ztPrkBbxRoBAnPRlA8KKVjjbZXbWmfQ1o-jEPhtfLXdSyaxADmhs3KsHmCcmg5ZW64RQ6QI2xFMXbm3KqJensdu0DkF_MnO7I1CwP9NtyhrHDXcRiAOWcWcCY8kC963nPoY2bCFZgYlWsVQRUEVDLn4UTZ9D677WEiD6S37E1b-5AsYmeOprx42Hni3zlBLU3bbps4lLrcc5GrAqAUy" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jb250cmlidXRpb24udXNlcmNvbnRlbnQuZ29vZ2xlLmNvbS9kb3dubG9hZD9jPUNneGlZWEprWDNOMGIzSmhaMlVTVUJJTmNtVnpjRzl1YzJWZlpHRjBZUm9fQ2pBeE56Tm1NbVptT1dJNE1XTTJPVEptTURBd05qVTVORE01WWpOaVpUWXdOVEF5T1RVNVpXSTVZVGd4WldJeU9EVVNDeElIRUlDT2hZX2VDeGdCJmZpbGVuYW1lPWluZGV4Lmh0bWwmb3BpPTEwMzEzNTA1MA"/><style>
+        :root {
+            --bg-primary: #08070a;
+            --bg-secondary: #100d14;
+            --bg-card: #16121b;
+            --accent-red: #ba182b;
+            --accent-red-bright: #e62e43;
+            --accent-red-dark: #6e0b17;
+            --accent-gold: #c5a059;
+            --accent-gold-bright: #e5c178;
+            --accent-gold-subtle: rgba(197, 160, 89, 0.25);
+            --text-main: #f3f1f5;
+            --text-muted: #a6a0b0;
+            --text-dim: #6d6678;
+            --border-color: rgba(197, 160, 89, 0.2);
+            --border-red: rgba(186, 24, 43, 0.35);
+            --border-hover: rgba(197, 160, 89, 0.6);
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.75;
+            font-size: 16px;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(186, 24, 43, 0.08) 0%, transparent 60%),
+                radial-gradient(circle at 80% 100%, rgba(197, 160, 89, 0.05) 0%, transparent 50%);
+        }
+
+        ::selection {
+            background: var(--accent-red);
+            color: #ffffff;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-red-dark);
+            border: 1px solid var(--accent-gold-subtle);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-red);
+        }
+
+        /* Header & Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(8, 7, 10, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.25rem 2rem;
+            transition: var(--transition-smooth);
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        .brand-name {
+            font-family: var(--font-heading);
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: 0.04em;
+            text-shadow: 0 0 10px rgba(197, 160, 89, 0.2);
+        }
+
+        .brand-title {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-red), var(--accent-gold));
+            transition: var(--transition-smooth);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-gold-bright);
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        /* Mobile Menu Button */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--accent-gold);
+            padding: 0.4rem 0.8rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        /* Main Container & Sections */
+        main {
+            flex: 1;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 5rem;
+        }
+
+        .section-page {
+            display: none;
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .section-page.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Section Headers */
+        .section-header {
+            margin-bottom: 3.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.1;
+            display: inline-block;
+            letter-spacing: 0.03em;
+        }
+
+        .section-header-ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 0.75rem;
+            color: var(--accent-gold);
+        }
+
+        .section-header-ornament::before,
+        .section-header-ornament::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold));
+        }
+
+        .section-header-ornament::after {
+            background: linear-gradient(90deg, var(--accent-gold), transparent);
+        }
+
+        /* Section 1: Página Inicial Blocks */
+        .home-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 4.5rem;
+        }
+
+        .home-block {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3.5rem;
+            align-items: center;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 4px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        .home-block:hover {
+            border-color: var(--accent-gold);
+            box-shadow: 0 20px 45px rgba(186, 24, 43, 0.15);
+        }
+
+        .home-block::before {
+            content: '❖';
+            position: absolute;
+            top: -10px;
+            left: 25px;
+            background: var(--bg-primary);
+            color: var(--accent-gold);
+            padding: 0 8px;
+            font-size: 0.85rem;
+        }
+
+        .home-block.no-image {
+            grid-template-columns: 1fr;
+            border-left: 3px solid var(--accent-red);
+        }
+
+        .home-block-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .home-block-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-gold-bright);
+            line-height: 1.2;
+            border-left: 3px solid var(--accent-red);
+            padding-left: 1.25rem;
+        }
+
+        .home-block-text {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            font-weight: 300;
+            line-height: 1.85;
+        }
+
+        .home-image-wrapper {
+            position: relative;
+            border-radius: 2px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            background: #000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+        }
+
+        .home-image-wrapper img {
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition-smooth);
+        }
+
+        .home-image-wrapper:hover img {
+            transform: scale(1.02);
+            filter: brightness(1.05);
+        }
+
+        .hero-quote-footer {
+            margin-top: 5rem;
+            padding: 3rem 1.5rem;
+            background: linear-gradient(180deg, transparent 0%, var(--bg-secondary) 100%);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+            position: relative;
+        }
+
+        .quote-text {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-style: italic;
+            color: var(--accent-red-bright);
+            letter-spacing: 0.06em;
+            text-shadow: 0 0 15px rgba(186, 24, 43, 0.4);
+        }
+
+        /* Section 2: Mediação */
+        .mediation-container {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+        }
+
+        .highlight-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-red);
+            padding: 2.5rem;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        .highlight-title {
+            font-family: var(--font-heading);
+            font-size: 2.3rem;
+            color: var(--accent-gold-bright);
+            margin-bottom: 1.25rem;
+            font-weight: 700;
+        }
+
+        .lead-p {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            font-weight: 300;
+            line-height: 1.85;
+        }
+
+        /* Carousel Section */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--bg-secondary);
+            padding: 1.5rem 0;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        }
+
+        .carousel-title {
+            text-align: center;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 1.25rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .carousel-track-wrapper {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            animation: scrollCarousel 38s linear infinite;
+            width: max-content;
+        }
+
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        .carousel-item {
+            flex: 0 0 280px;
+            height: 200px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--border-red);
+            position: relative;
+            background: #000;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .carousel-item:hover img {
+            transform: scale(1.06);
+            filter: brightness(1.1);
+        }
+
+        @keyframes scrollCarousel {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Breathing Space / Divider */
+        .breathing-space {
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .breathing-space::after {
+            content: '❖   ✦   ❖';
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+            letter-spacing: 1.8rem;
+            opacity: 0.7;
+            padding-left: 1.8rem;
+        }
+
+        /* Oficinas Block */
+        .oficinas-card {
+            background: linear-gradient(145deg, var(--bg-secondary) 0%, rgba(22, 18, 27, 0.95) 100%);
+            border: 1px solid var(--border-color);
+            border-top: 3px solid var(--accent-gold);
+            padding: 3rem 2.5rem;
+            border-radius: 4px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .oficinas-header {
+            font-family: var(--font-heading);
+            font-size: 2.4rem;
+            color: var(--accent-gold-bright);
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .oficinas-group {
+            margin-bottom: 2rem;
+        }
+
+        .oficinas-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .institution-tag {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-red-bright);
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--accent-red-dark);
+            padding-bottom: 0.2rem;
+        }
+
+        .workshops-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            padding-left: 1rem;
+        }
+
+        .workshops-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            color: var(--text-main);
+            font-size: 1.05rem;
+            font-weight: 300;
+        }
+
+        .workshops-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--accent-gold);
+            font-size: 0.75rem;
+        }
+
+        .mediation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-block {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 2.2rem;
+            border-radius: 4px;
+            transition: var(--transition-smooth);
+        }
+
+        .info-block:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .info-block h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--accent-gold-bright);
+            margin-bottom: 1rem;
+        }
+
+        .info-block p {
+            color: var(--text-muted);
+            font-size: 1.02rem;
+            line-height: 1.8;
+        }
+
+        .expansion-banner {
+            background: linear-gradient(135deg, rgba(186, 24, 43, 0.15) 0%, rgba(16, 13, 20, 0.95) 100%);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-gold);
+            padding: 3rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        .expansion-banner h3 {
+            font-family: var(--font-heading);
+            font-size: 2.3rem;
+            color: var(--accent-gold-bright);
+            margin-bottom: 1.5rem;
+        }
+
+        .expansion-banner p {
+            color: var(--text-main);
+            font-size: 1.1rem;
+            line-height: 1.85;
+            margin-bottom: 1rem;
+        }
+
+        /* Section 3: Obras */
+        .obras-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        .obra-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 2.5rem;
+            padding: 2.5rem;
+            align-items: center;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .obra-card:hover {
+            border-color: var(--accent-gold);
+            box-shadow: 0 15px 35px rgba(186, 24, 43, 0.2);
+        }
+
+        .obra-img-wrapper {
+            position: relative;
+            border-radius: 2px;
+            overflow: hidden;
+            background: #000;
+            aspect-ratio: 3/4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .obra-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .obra-card:hover .obra-img-wrapper img {
+            transform: scale(1.03);
+        }
+
+        .obra-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .obra-title {
+            font-family: var(--font-heading);
+            font-size: 2.3rem;
+            color: var(--accent-gold-bright);
+            line-height: 1.2;
+        }
+
+        .obra-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-red-bright);
+            font-weight: 700;
+        }
+
+        .obra-synopsis {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .btn-access {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            align-self: flex-start;
+            margin-top: 0.5rem;
+            padding: 0.7rem 1.4rem;
+            background: rgba(186, 24, 43, 0.2);
+            color: var(--text-main);
+            border: 1px solid var(--accent-gold);
+            border-radius: 2px;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-access:hover {
+            background: var(--accent-red);
+            color: #ffffff;
+            border-color: var(--accent-gold-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(186, 24, 43, 0.4);
+        }
+
+        /* Specific Red & White Styling for "Amor aos pedaços" */
+        .obra-card.amor-aos-pedacos {
+            background: linear-gradient(135deg, #1d070a 0%, #0c0304 100%);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            position: relative;
+        }
+
+        .obra-card.amor-aos-pedacos::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #ffffff, var(--accent-red-bright), #ffffff);
+        }
+
+        .obra-card.amor-aos-pedacos .obra-title {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .obra-card.amor-aos-pedacos .obra-synopsis {
+            color: #f0f0f5;
+        }
+
+        .obra-card.amor-aos-pedacos .obra-tag {
+            color: #ffffff;
+            background: var(--accent-red);
+            padding: 0.25rem 0.75rem;
+            border-radius: 2px;
+            width: fit-content;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: auto;
+            position: relative;
+        }
+
+        footer::before {
+            content: '❖';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--bg-secondary);
+            color: var(--accent-gold);
+            padding: 0 10px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .footer-callout {
+            font-family: var(--font-heading);
+            font-size: 1.9rem;
+            color: var(--accent-gold-bright);
+            font-weight: 600;
+        }
+
+        .footer-contact {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-contact a {
+            color: var(--accent-red-bright);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-contact a:hover {
+            color: var(--accent-gold);
+            text-decoration: underline;
+        }
+
+        /* Image Placeholder */
+        .img-placeholder {
+            width: 100%;
+            height: 100%;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #120e17;
+            color: var(--text-dim);
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px stroke var(--border-color);
+        }
+
+        .img-placeholder span {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-gold);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .home-block {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .obra-card {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .obra-img-wrapper {
+                max-width: 350px;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            .carousel-item {
+                flex: 0 0 220px;
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 1rem;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg-secondary);
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 1rem;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            nav ul.mobile-open {
+                display: flex;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .home-block-title {
+                font-size: 2rem;
+            }
+
+            .quote-text {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#inicio" class="brand" onclick="switchSection('inicio')">
+                <span class="brand-name">Lucas Tsuruda</span>
+                <span class="brand-title">Escritor & Mediador de Escrita</span>
+            </a>
+            <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Abrir Menu">☰</button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#inicio" id="nav-inicio" class="active" onclick="switchSection('inicio')">Página Inicial</a></li>
+                    <li><a href="#mediacao" id="nav-mediacao" onclick="switchSection('mediacao')">Mediação</a></li>
+                    <li><a href="#obras" id="nav-obras" onclick="switchSection('obras')">Obras</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+
+        <!-- SEÇÃO 1: PÁGINA INICIAL -->
+        <section id="inicio" class="section-page active">
+            <div class="home-stack">
+                
+                <!-- Bloco 1: Escritor -->
+                <div class="home-block">
+                    <div class="home-block-content">
+                        <h2 class="home-block-title">Escritor</h2>
+                        <p class="home-block-text">
+                            Com projeto literário sobre a memória, permanência e a profundidade do cotidiano. Escreve prosa e poesia, mistura linguagens e explora e relação de corporalidade e textualidade.
+                        </p>
+                    </div>
+                    <div class="home-image-wrapper">
+                        <img src="imagem 1_3.jpg" alt="Lucas Tsuruda — Escritor" onerror="this.onerror=null; this.src='imagem1.jpg';">
+                    </div>
+                </div>
+
+                <!-- Bloco 2: Professor -->
+                <div class="home-block">
+                    <div class="home-block-content">
+                        <h2 class="home-block-title">Professor</h2>
+                        <p class="home-block-text">
+                            Formado em Letras Português pela Universidade Tecnológica Federal do Paraná, estudou e pesquisou sobre literatura e morte, bem como sobre a Escrita Criativa. Seu Trabalho de Conclusão de Curso foi apresentado e transmitido em rede com apoio da Universidade Tecnológica Federal do Paraná.
+                        </p>
+                    </div>
+                    <div class="home-image-wrapper">
+                        <img src="imagem 2 v2_2.jpeg" alt="Lucas Tsuruda — Professor" onerror="this.onerror=null; this.src='imagem 2 v2.jpeg';">
+                    </div>
+                </div>
+
+                <!-- Bloco 3: Artista Marcial da Palavra -->
+                <div class="home-block no-image">
+                    <div class="home-block-content">
+                        <h2 class="home-block-title">Artista Marcial da Palavra</h2>
+                        <p class="home-block-text">
+                            Utilzando de sua vivência e estudos de corporalidade, anatomia e fisiologia a escrita e mediações de escrita são ampliadas. Escrever com a mão esquerda é escrever conectado com o coração e o lado mais profundo de si.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Rodapé da Página Inicial -->
+            <div class="hero-quote-footer">
+                <p class="quote-text">"Viva Criativa Mente"</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: MEDIAÇÃO -->
+        <section id="mediacao" class="section-page">
+            <div class="section-header">
+                <h2 class="section-title">Mediação</h2>
+                <div class="section-header-ornament">❖</div>
+            </div>
+
+            <div class="mediation-container">
+                <!-- Highlight Roda de Escrita -->
+                <div class="highlight-card">
+                    <h3 class="highlight-title">Roda de Escrita</h3>
+                    <p class="lead-p">
+                        Imagine integrar arte e ciência, tecnologia e sociedade em um lugar e momento. Deixar de ser um estranho com o outro e fazer parte de uma comunidade arquitetada para que todos possam se desenvolver juntos? A Roda de Escrita conta com apoio, intenção e um elo que fica cada vez mais sólido entre seus participantes.
+                    </p>
+                </div>
+
+                <!-- Carrossel de Imagens Cíclico -->
+                <div class="carousel-container">
+                    <div class="carousel-title">✦ Galeria de Vivências & Mediações ✦</div>
+                    <div class="carousel-track-wrapper">
+                        <div class="carousel-track">
+                            <div class="carousel-item"><img src="imagem 3 v2_2.jpeg" alt="Mediação 3" onerror="this.onerror=null; this.src='imagem 3 v2.jpeg';"></div>
+                            <div class="carousel-item"><img src="mg 4_2.jpeg" alt="Mediação 4" onerror="this.onerror=null; this.src='mg 4.jpeg';"></div>
+                            <div class="carousel-item"><img src="mg 5_2.jpeg" alt="Mediação 5" onerror="this.onerror=null; this.src='mg 5.jpeg';"></div>
+                            <div class="carousel-item"><img src="mg 6_2.jpeg" alt="Mediação 6" onerror="this.onerror=null; this.src='mg 6.jpeg';"></div>
+                            <div class="carousel-item"><img src="mg 7_2.jpeg" alt="Mediação 7" onerror="this.onerror=null; this.src='mg 7.jpeg';"></div>
+                            <div class="carousel-item"><img src="mg 8_2.jpeg" alt="Mediação 8" onerror="this.onerror=null; this.src='mg 8.jpeg';"></div>
+                            <div class="carousel-item"><img src="mg 9_2.jpeg" alt="Mediação 9" onerror="this.onerror=null; this.src='mg 9.jpeg';"></div>
+                            <div class="carousel-item"><img src="mg 10_2.jpeg" alt="Mediação 10" onerror="this.onerror=null; this.src='mg 10.jpeg';"></div>
+
+                            <!-- Duplicação Cíclica -->
+                            <div class="carousel-item"><img src="imagem 3 v2_2.jpeg" alt="Mediação 3" onerror="this.onerror=null; this.src='imagem 3 v2.jpeg';"></div>
+                            <div class="carousel-item"><img src="mg 4_2.jpeg" alt="Mediação 4" onerror="this.onerror=null; this.src='mg 4.jpeg';"></div>
+                            <div class="carousel-item"><img src="mg 5_2.jpeg" alt="Mediação 5" onerror="this.onerror=null; this.src='mg 5.jpeg';"></div>
+                            <div class="carousel-item"><img src="mg 6_2.jpeg" alt="Mediação 6" onerror="this.onerror=null; this.src='mg 6.jpeg';"></div>
+                            <div class="carousel-item"><img src="mg 7_2.jpeg" alt="Mediação 7" onerror="this.onerror=null; this.src='mg 7.jpeg';"></div>
+                            <div class="carousel-item"><img src="mg 8_2.jpeg" alt="Mediação 8" onerror="this.onerror=null; this.src='mg 8.jpeg';"></div>
+                            <div class="carousel-item"><img src="mg 9_2.jpeg" alt="Mediação 9" onerror="this.onerror=null; this.src='mg 9.jpeg';"></div>
+                            <div class="carousel-item"><img src="mg 10_2.jpeg" alt="Mediação 10" onerror="this.onerror=null; this.src='mg 10.jpeg';"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oficinas em Destaque -->
+                <div class="oficinas-card">
+                    <h3 class="oficinas-header">Oficinas</h3>
+
+                    <div class="oficinas-group">
+                        <span class="institution-tag">UTFPR (2026)</span>
+                        <ul class="workshops-list">
+                            <li>Entre Penas e Teclados</li>
+                            <li>Tessitura</li>
+                            <li>Roda de Escrita</li>
+                            <li>Escrita Criativa em sala de aula</li>
+                        </ul>
+                    </div>
+
+                    <div class="oficinas-group">
+                        <span class="institution-tag">PUCPR (2024-2025)</span>
+                        <ul class="workshops-list">
+                            <li>Escrita e Escuta</li>
+                            <li>Escrita como resistência e memória</li>
+                            <li>Palestra: Fiz letras porque quis ser escritor, e agora?</li>
+                        </ul>
+                    </div>
+
+                    <div class="oficinas-group">
+                        <span class="institution-tag">UNESPAR (2022)</span>
+                        <ul class="workshops-list">
+                            <li>Espaço e ambiente na escrita criativa - Aula</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="breathing-space"></div>
+
+                <div class="mediation-grid">
+                    <div class="info-block">
+                        <h3>Como tudo começou?</h3>
+                        <p>
+                            Em 2021 a Roda de Escrita começa na Universidade Tecnológica Federal do Paraná como uma oficina online, que se expandiu no modelo presencial para outras universidades, como a UFPR e a PUC-PR, por meio de oficinas, palestras e mediações sobre literatura e a produção de escrita, assim como em empresas voltadas para seu uso educacional e de construção de cultura em organizações.
+                        </p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>Comunidade & Produção Circular</h3>
+                        <p>
+                            O trabalho focado e estruturado na construção de uma comunidade literária promove uma produção circular, substituindo o modelo "extrair-produzir-descartar" que esvazia as relações culturais e humanas. Um modelo circular de compreensão da arte e literatura promove uma organização que pode florescer o interesse genuíno em produtos culturais conectados com pessoas autoras e escritoras e seu público.
+                        </p>
+                    </div>
+
+                    <div class="info-block" style="grid-column: 1 / -1;">
+                        <h3 style="color: var(--accent-gold-bright);">Arte ComCiência</h3>
+                        <p style="font-size: 1.1rem; color: var(--text-main);">
+                            As práticas de Lucas partem de evidências, a construção efetiva juntando a ciência e o sensível. Indo além de um “vale tudo” criativo, e arquitetando práticas que possam ser efetivas mediante experiências sólidas e subjetivas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="expansion-banner">
+                    <h3>Expansão Literária</h3>
+                    <p>
+                        Um livro sempre é mais do que um livro. É uma comunidade, um espelho, uma interrogação e uma resposta.
+                    </p>
+                    <p>
+                        A atuação de Lucas vem também para aproveitar os novos fenômenos culturais e tecnológicos para desenvolver ao máximo o mundo novo que vem com a materialidade do livro. Para ajudar autores a compreenderem e desenvolverem mais do que “só” escrever, e permitir explorar totalmente as faces que sua obra pode trazer, desde camisetas, acessórios a até eventos temáticos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: OBRAS -->
+        <section id="obras" class="section-page">
+            <div class="section-header">
+                <h2 class="section-title">Obras</h2>
+                <div class="section-header-ornament">❖</div>
+            </div>
+
+            <div class="obras-stack">
+                <!-- Obra 1: Antologia da Roda de Escrita Criativa -->
+                <article class="obra-card">
+                    <div class="obra-img-wrapper">
+                        <img src="antologia capa.jpeg" alt="Antologia da Roda de Escrita Criativa" onerror="this.onerror=null; this.src='imagem2.jpg';">
+                    </div>
+                    <div class="obra-details">
+                        <span class="obra-tag">Obra Coletiva • 2026</span>
+                        <h3 class="obra-title">Antologia da Roda de Escrita Criativa</h3>
+                        <p class="obra-synopsis">
+                            Reunindo textos dos participantes da primeira Roda de Escrita de 2026, essa obra se propõe a ser um exercício coletivo. A cada dez minutos os textos eram trocados entre os participantes, criando uma obra única e tripla de forma simultânea. Toda a obra foi editada, revisada e diagramada de forma voluntária por seus participantes, transformando um exercício de escrita em uma oportunidade de profissionalização, experimentação e publicação conjunta.
+                        </p>
+                        <a href="https://drive.google.com/file/d/1WLCl5E--LDz_5ku7IRTuCWW4Q2PtsHzN/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-access">
+                            Acesse aqui
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Obra 2: Amor aos pedaços -->
+                <article class="obra-card amor-aos-pedacos">
+                    <div class="obra-details" style="grid-column: 1 / -1;">
+                        <span class="obra-tag">Roteiro de Curta-Metragem</span>
+                        <h3 class="obra-title">Amor aos pedaços</h3>
+                        <p class="obra-synopsis">
+                            A história, tragicômica, beirando o absurdo, chamada “Amor aos Pedaços”, representa um relacionamento abusivo que culmina na morte da parceira, seja essa a morte literal ou a perda da existência simbólica. O curta também aborda o descaso sistêmico em casos de violência contra a mulher. O comportamento inquietante e incoerente do Homem é a cereja do bolo para nos fazer questionar: ele sabe o que está fazendo? Ele tem noção da realidade? Ele está perdido em luto? Nada disso importa, não podemos nos esquecer de que ele cometeu feminicídio, da crueldade e do sadismo presentes, mesmo quando tudo parece normal.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Obra 3: Participação na Antologia Poética LiteraturaBR -->
+                <article class="obra-card">
+                    <div class="obra-img-wrapper">
+                        <img src="antologia poetica capa.jpeg" alt="Antologia Poética LiteraturaBR" onerror="this.onerror=null; this.src='imagem12.jpg';">
+                    </div>
+                    <div class="obra-details">
+                        <span class="obra-tag">Antologia Poética • Publicação</span>
+                        <h3 class="obra-title">Participação na Antologia Poética LiteraturaBR</h3>
+                        <p class="obra-synopsis">
+                            Participação especial na Antologia Poética LiteraturaBR com a publicação dos poemas <strong>"Ela"</strong> e <strong>"Sob os passos do Coração"</strong>, explorando a delicadeza, o ritmo e a sensibilidade lírica do autor.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Obra 4: Nefelibata -->
+                <article class="obra-card">
+                    <div class="obra-img-wrapper">
+                        <img src="Capa.jpg" alt="Capa - Nefelibata" onerror="this.onerror=null; this.src='imagem1.jpg';">
+                    </div>
+                    <div class="obra-details">
+                        <span class="obra-tag">Lançamento em 2026</span>
+                        <h3 class="obra-title">Nefelibata</h3>
+                        <p class="obra-synopsis">
+                            Na busca de respostas sobre o mistério de si, a jovem estudante de enfermagem Cecília Lispector se vê na fronteira entre o mundo acordado e os sonhos. Com os olhos abertos ela vive de forma mecânica e infeliz, até que o chamado do outro lado a leva em uma jornada entre os céus e os infernos da Verdade.
+                        </p>
+                        <p class="obra-synopsis">
+                            Entre os devaneios de outra realidade, Cecília se encontra com Bárbara, uma sonhadora perdida no outro mundo que busca a chave para voltar ao mundo real. Mas, os pesadelos e seus terrores que atravessam mundos também estão à espreita e mais próximos a cada vez que ela fecha seus olhos. Nefelibata transita entre passado e presente, fato e ficção, clássico e moderno, arcano e revelação em uma experiência sobre o enigma que rodeia os indivíduos, instituições e a própria nação.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="footer-callout">Vamos crescer juntos?</p>
+            <p class="footer-contact">
+                Contato: <a href="mailto:lucastsurudaamaral@gmail.com">lucastsurudaamaral@gmail.com</a> | <a href="https://instagram.com/lucas_tsuruda" target="_blank" rel="noopener">@lucas_tsuruda</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function switchSection(sectionId) {
+            document.querySelectorAll('.section-page').forEach(sec => sec.classList.remove('active'));
+            const target = document.getElementById(sectionId);
+            if (target) target.classList.add('active');
+
+            document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+            const activeLink = document.getElementById('nav-' + sectionId);
+            if (activeLink) activeLink.classList.add('active');
+
+            const menu = document.getElementById('nav-menu');
+            if (menu) menu.classList.remove('mobile-open');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('nav-menu').classList.toggle('mobile-open');
+        }
+
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.replace('#', '');
+            if (hash && ['inicio', 'mediacao', 'obras'].includes(hash)) {
+                switchSection(hash);
+            }
+        });
+    </script>
+</body>
+</html>
